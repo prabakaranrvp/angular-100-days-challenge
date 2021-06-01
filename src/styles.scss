@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.center {
+  text-align: center;
+}
+
+
+#app-footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  background: #eff3f6;
+
+  a {
+    margin-left: 0.25em;
+  }
+}
+
+
+.home-component {
+  margin: 24px 0;
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 4px;
+  }
+}
+
+.bold-1 {
+  font-weight: 500;
+}
+
+.bold-2 {
+  font-weight: 600;
+}
+
+.bold-3 {
+  font-weight: 700;
+}
