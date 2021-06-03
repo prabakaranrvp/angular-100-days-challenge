@@ -18,3 +18,16 @@ Daily updates will be posted in this file.
  - Understanding `<ng-content>`
 
 ---
+
+## Day 3
+ - Learned Typescript basics
+   - interface
+   - type
+   - union
+ - Nested `ng-content`, dynamic ng-content
+
+---
+
+### Team
+ - [Prabakaran Raja](https://github.com/prabakaranrvp)
+ - [Jayaprasanth Gurunathan](https://github.com/jayaprasanth-g)

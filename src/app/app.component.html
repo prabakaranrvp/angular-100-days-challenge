@@ -1,10 +1,12 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
+  <a href="/home">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+    />
+  </a>
   <span>{{title}}</span>
     <div class="spacer"></div>
     <a aria-label="Prabakaran on twitter" target="_blank" rel="noopener" href="https://twitter.com/prabakaranrvp" title="Prabakaran Raja Twitter">
@@ -17,7 +19,7 @@
 <ui-toolbar>
   <p>A Sample App to learn Angular JS</p>
   <ul>
-    <li>Github Repo</li>
+    <li><a href="https://github.com/prabakaranrvp/angular-100-days-challenge" target="_blank" rel="noopener">Github Repo</a></li>
     <li>Slack Channel</li>
     <li>Team</li>
   </ul>
@@ -25,15 +27,18 @@
 
 <div class="content" role="main">
   <section class="card-container">
-    <div class="card">
-      Components
-    </div>
-    <div class="card">
-      Routes
-    </div>
-    <div class="card">
-      Tests
-    </div>
+    <app-card>
+      <span>Components</span>
+      <span hover>Angular Components</span>
+    </app-card>
+    <app-card>
+      <span>Routes</span>
+      <span hover>Angular Router</span>
+    </app-card>
+    <app-card>
+      <span>Tests</span>
+      <span hover>Unit Tests</span>
+    </app-card>
   </section>
 
   <router-outlet></router-outlet>
