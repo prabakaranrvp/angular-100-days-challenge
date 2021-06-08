@@ -126,3 +126,12 @@
 .card.card.highlight-card span {
   margin-left: 60px;
 }
+
+
+
+.route-modal .modal-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+
+}

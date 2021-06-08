@@ -28,6 +28,13 @@ Daily updates will be posted in this file.
 
 ---
 
+## Day 4
+ - Implemented a basic Modal component
+ - Event Handling in components
+ - Used Typescript Interface
+
+---
+
 ### Team
  - [Prabakaran Raja](https://github.com/prabakaranrvp)
  - [Jayaprasanth Gurunathan](https://github.com/jayaprasanth-g)

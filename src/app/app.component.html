@@ -31,7 +31,7 @@
       <span>Components</span>
       <span hover>Angular Components</span>
     </app-card>
-    <app-card>
+    <app-card tabindex="0" (click)="openRouteModal()">
       <span>Routes</span>
       <span hover>Angular Router</span>
     </app-card>
@@ -40,6 +40,12 @@
       <span hover>Unit Tests</span>
     </app-card>
   </section>
+
+
+  <app-modal [ModalConfig]="RouteOptions">
+    <a href="/index">Index</a>
+    <a href="/home">Home</a>
+  </app-modal>
 
   <router-outlet></router-outlet>
 </div>
