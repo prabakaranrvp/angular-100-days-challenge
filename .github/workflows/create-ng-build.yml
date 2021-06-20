@@ -34,7 +34,7 @@ jobs:
           cd build
           ls -la
           cd ..
-          cp -r .github/workflows/ build/.github/workflows
+#          cp -r .github/workflows/ build/.github/workflows
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
