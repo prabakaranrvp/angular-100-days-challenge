@@ -24,11 +24,17 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Bundle built files
+        run: mkdir build
+        run: cp -r .github/workflows/ build/.github/workflows
+        run: cp firebase.json build/firebase.json
+        run: cp -r dist/ang-first-app build/public
+
       - name: Push
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
           BRANCH: publish # The branch name where you want to push the assets
-          FOLDER: dist/ang-first-app # The directory where your assets are generated
+          FOLDER: build # The directory where your assets are generated
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
