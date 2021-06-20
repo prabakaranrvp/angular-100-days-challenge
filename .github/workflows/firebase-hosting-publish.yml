@@ -8,10 +8,13 @@ name: Deploy to Firebase Hosting on merge
       - publish
 jobs:
   deploy_in_firebase:
-    - uses: actions/checkout@v2
-    - uses: FirebaseExtended/action-hosting-deploy@v0
-      with:
-        repoToken: '${{ secrets.GITHUB_TOKEN }}'
-        firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANGULAR_CHALLENGE_D5F6C }}'
-        channelId: live
-        projectId: angular-challenge-d5f6c
+    name: "Deploying in Firebase"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANGULAR_CHALLENGE_D5F6C }}'
+          channelId: live
+          projectId: angular-challenge-d5f6c
