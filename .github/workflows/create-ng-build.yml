@@ -29,9 +29,11 @@ jobs:
 
       - name: Bundle built files
         run: |
-          ls -la
           cp firebase.json build/firebase.json
           cp -r dist/ang-first-app build/public
+          cd build
+          ls -la
+          cd ..
           cp -r .github/workflows/ build/.github/workflows
 
       - name: Push
