@@ -1,5 +1,5 @@
 # .github/workflows/publish.yml
-name: Generate a build
+name: Build
 
 on:
   push:
@@ -31,10 +31,10 @@ jobs:
         run: |
           cp firebase.json build/firebase.json
           cp -r dist/ang-first-app build/public
-          
+
       - name: Create github hidden folder
         run: mkdir build/.github
-        
+
       - name: Copy deploy workflow
         run: cp -r .github/workflows/ build/.github/workflows
 
