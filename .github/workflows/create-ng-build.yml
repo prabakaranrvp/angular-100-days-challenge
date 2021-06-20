@@ -24,9 +24,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Create build Dir
+        run: mkdir build
+
       - name: Bundle built files
         run: |
-          mkdir build
           cp -r .github/workflows/ build/.github/workflows
           cp firebase.json build/firebase.json
           cp -r dist/ang-first-app build/public
