@@ -4,7 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist/ang-first-app",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
