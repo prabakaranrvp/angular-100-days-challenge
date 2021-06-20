@@ -1,0 +1,48 @@
+# .github/workflows/publish.yml
+name: Generate a build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build and Push
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node_version: ['14.15']
+        os: [ubuntu-latest]
+    steps:
+      - name: git-checkout
+        uses: actions/checkout@v2
+
+#       - name: Install all dependencies
+#         run: npm install
+
+#       - name: Build
+#         run: npm run build
+
+      - name: Create build Dir
+        run: mkdir build
+
+      - name: Bundle built files
+        run: |
+          cp firebase.json build/firebase.json
+          cp -r dist/ang-first-app build/public
+          
+      - name: Create github hidden folder
+        run: mkdir build/.github
+        
+      - name: Copy deploy workflow
+        run: cp -r .github/workflows/ build/.github/workflows
+
+      - name: Push
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: publish # The branch name where you want to push the assets
+          FOLDER: build # The directory where your assets are generated
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+          MESSAGE: "Build: ({sha}) {msg}" # The commit message
