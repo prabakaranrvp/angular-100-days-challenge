@@ -25,10 +25,11 @@ jobs:
         run: npm run build
 
       - name: Bundle built files
-        run: mkdir build
-        run: cp -r .github/workflows/ build/.github/workflows
-        run: cp firebase.json build/firebase.json
-        run: cp -r dist/ang-first-app build/public
+        run: |
+          mkdir build
+          cp -r .github/workflows/ build/.github/workflows
+          cp firebase.json build/firebase.json
+          cp -r dist/ang-first-app build/public
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
