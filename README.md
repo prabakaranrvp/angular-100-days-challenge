@@ -35,6 +35,18 @@ Daily updates will be posted in this file.
 
 ---
 
+## Day 5
+ - Firebase integration hosting
+ - Workflow setup for automated build and deploy using github actions
+
+---
+
+## Day 6 | Mini Project
+ - Netflix Clone project init
+ - Header and Hero banner created
+
+---
+
 ### Team
  - [Prabakaran Raja](https://github.com/prabakaranrvp)
  - [Jayaprasanth Gurunathan](https://github.com/jayaprasanth-g)
