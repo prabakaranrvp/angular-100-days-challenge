@@ -3,18 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ToolbarComponent } from './component/toolbar/toolbar.component';
-import { CardComponent } from './component/card/card.component';
-import { ModalComponent } from './component/modal/modal.component';
+import { HeaderComponent } from './component/header/header.component';
+import { HeroBannerComponent } from './component/hero-banner/hero-banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ToolbarComponent,
-    CardComponent,
-    ModalComponent
+    HeaderComponent,
+    HeroBannerComponent
   ],
   imports: [
     BrowserModule,
